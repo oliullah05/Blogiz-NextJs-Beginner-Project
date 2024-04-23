@@ -2,9 +2,10 @@ import Image from "next/image";
 import { AiFillLike } from "react-icons/ai";
 import { FaCalendar } from "react-icons/fa";
 
-const BlogDetails = ({ blog }) => {
+const BlogDetails = ({ blog }:{blog:TBlog}) => {
+
   return (
-    <div className="card w-2/3 bg-base-100 shadow-xl mx-auto">
+    <div className="card w-2/3 bg-base-100 shadow-xl mx-auto my-10">
       <p className="flex items-center justify-center mx-auto text-accent bg-cyan-100 w-44 px-2 py-1 rounded-full">
         <FaCalendar className="mr-2" />
         {blog.publish_date}
