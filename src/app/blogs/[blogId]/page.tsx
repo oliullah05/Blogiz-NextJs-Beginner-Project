@@ -1,5 +1,9 @@
 import BlogDetails from "@/components/ui/BlogDetails";
-
+interface TBlogId {
+    params: {
+        blogId: string
+    }
+}
 
 export const generateStaticParams = async () => {
     const res = await fetch(`http://localhost:5000/blogs`);
@@ -9,14 +13,8 @@ export const generateStaticParams = async () => {
     }))
 }
 
-interface TBlogId {
-    params: {
-        blogId: string
-    }
-}
 
 const BlogDetailsPage = async ({ params }: TBlogId) => {
-    console.log(`rendaring with id ${params.blogId}`);
     const blog = await (await fetch(`http://localhost:5000/blogs/${params.blogId}`)).json();
     return (
         <div>
