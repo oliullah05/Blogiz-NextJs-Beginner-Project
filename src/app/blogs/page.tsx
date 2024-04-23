@@ -9,7 +9,7 @@ const AllBlogsPage =  () => {
     // const blogs: TBlog[] = await res.json()
 
     const {data:blogs,isError,isLoading,error} = useGetBlogsQuery(undefined)
-    console.log(blogs);
+    // console.log(blogs);
     return (
         <div>
             <h1 className="text-center text-4xl my-5">All Blogs From <span className='text-accent'>Blogiz</span></h1>
