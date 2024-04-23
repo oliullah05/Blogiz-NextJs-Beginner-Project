@@ -3,9 +3,9 @@ import Link from "next/link";
 import { AiFillLike } from "react-icons/ai";
 import { FaCalendar } from "react-icons/fa";
 
-const LatestBlogCard = ({ blog }) => {
+const LatestBlogCard = ({ blog }:{blog:TBlog}) => {
   return (
-    <div key={blog.id} className="card w-full bg-base-100 shadow-xl">
+    <div key={blog.id} className="card w-full bg-base-100 shadow-xl my-2">
       <figure>
         <Image
           src={blog.blog_image}
